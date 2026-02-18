@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - GreenNest</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="blog-style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#2e7d32"/>
+        </svg>
+        GreenNest
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Browse Plants</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Plant Care</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item">
+            <button class="btn btn-register ms-2">Register</button>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BLOG HEADER -->
+  <div class="blog-header">
+    <h1>GreenNest Blog</h1>
+    <p>Expert articles, seasonal tips, and in-depth care guides to help your garden flourish.</p>
+  </div>
+
+  <!-- FILTER SECTION -->
+  <div class="filter-section">
+    <!-- Note: Added 'this' to the function call to handle the active class correctly in external JS -->
+    <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
+    <button class="filter-btn" onclick="filterPosts('care-guides', this)">Care Guides</button>
+    <button class="filter-btn" onclick="filterPosts('tips', this)">Tips & Tricks</button>
+    <button class="filter-btn" onclick="filterPosts('seasonal', this)">Seasonal</button>
+    <button class="filter-btn" onclick="filterPosts('indoor', this)">Indoor</button>
+    <button class="filter-btn" onclick="filterPosts('outdoor', this)">Outdoor</button>
+  </div>
+
+  <!-- BLOG CONTAINER -->
+  <div class="blog-container">
+    <div class="blog-grid">
+      <!-- Featured Post -->
+      <article class="blog-card featured-post" data-category="care-guides">
+        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80" alt="Watering plants" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Care Guides</span>
+          <h3>The Ultimate Guide to Watering Indoor Plants</h3>
+          <p>Learn the golden rules of watering houseplants, from checking soil moisture to understanding each species' unique needs.</p>
+          <div class="blog-meta">
+            <span>Dr. Sarah Green</span>
+            <span>•</span>
+            <span>2026-01-28</span>
+            <span>•</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 2 -->
+      <article class="blog-card" data-category="seasonal">
+        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80" alt="Spring garden" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Seasonal</span>
+          <h3>Spring Planting: What to Grow Now</h3>
+          <p>Discover the best plants to start in spring and tips for preparing your garden for the growing season.</p>
+          <div class="blog-meta">
+            <span>Emily Chen</span>
+            <span>•</span>
+            <span>2026-01-25</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 3 -->
+      <article class="blog-card" data-category="tips">
+        <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=600&q=80" alt="Propagation" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Tips & Tricks</span>
+          <h3>5 Easy Ways to Propagate Your Favorite Plants</h3>
+          <p>Multiply your plant collection for free with these simple propagation techniques that work for most houseplants.</p>
+          <div class="blog-meta">
+            <span>Mike Rodriguez</span>
+            <span>•</span>
+            <span>2026-01-22</span>
+            <span>•</span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 4 -->
+      <article class="blog-card" data-category="indoor">
+        <img src="https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?auto=format&fit=crop&w=600&q=80" alt="Indoor plant lighting" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Indoor</span>
+          <h3>Understanding Light Requirements for Indoor Plants</h3>
+          <p>A comprehensive guide to choosing the right spot for your plants based on their light preferences.</p>
+          <div class="blog-meta">
+            <span>Lisa Park</span>
+            <span>•</span>
+            <span>2026-01-20</span>
+            <span>•</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 5 -->
+      <article class="blog-card" data-category="care-guides">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=600&q=80" alt="Fertilizing plants" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Care Guides</span>
+          <h3>Fertilizing 101: When and How to Feed Your Plants</h3>
+          <p>Learn the basics of plant nutrition and create a fertilizing schedule that works for your collection.</p>
+          <div class="blog-meta">
+            <span>Dr. Sarah Green</span>
+            <span>•</span>
+            <span>2026-01-18</span>
+            <span>•</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 6 -->
+      <article class="blog-card" data-category="outdoor">
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=600&q=80" alt="Garden design" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Outdoor</span>
+          <h3>Creating a Low-Maintenance Garden Design</h3>
+          <p>Design a beautiful outdoor space that thrives with minimal effort using these smart plant selections and layout tips.</p>
+          <div class="blog-meta">
+            <span>James Wilson</span>
+            <span>•</span>
+            <span>2026-01-15</span>
+            <span>•</span>
+            <span>10 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 7 -->
+      <article class="blog-card" data-category="tips">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Pest control" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Tips & Tricks</span>
+          <h3>Natural Pest Control for Healthy Plants</h3>
+          <p>Protect your plants from common pests using organic and eco-friendly methods that really work.</p>
+          <div class="blog-meta">
+            <span>Anna Martinez</span>
+            <span>•</span>
+            <span>2026-01-12</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Post 8 -->
+      <article class="blog-card" data-category="indoor">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Air purifying plants" class="blog-card-image">
+        <div class="blog-card-content">
+          <span class="blog-category">Indoor</span>
+          <h3>Top 10 Air-Purifying Plants for Your Home</h3>
+          <p>Improve your indoor air quality naturally with these beautiful and effective air-cleaning plants.</p>
+          <div class="blog-meta">
+            <span>Dr. Sarah Green</span>
+            <span>•</span>
+            <span>2026-01-10</span>
+            <span>•</span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="blog-script.js"></script>
+</body>
+</html>
