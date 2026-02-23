@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - GreenNest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="../Home/1st.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/765/765430.png" width="30" height="30" class="me-2" alt="GreenNest Logo">
+        GreenNest
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="../Home/1st.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../browse/index.html">Browse Plants</a></li>
+          <li class="nav-item"><a class="nav-link" href="../blog/index.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../plant _care_assistent/index.html">Plant Care</a></li>
+          <li class="nav-item"><a class="nav-link" href="../cart/index.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-register ms-2" href="index.html">Register</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../dashboard/index.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="register-section">
+    <div class="container">
+      <div class="page-header">
+        <h1>Sign In</h1>
+        <p>Welcome back to GreenNest.</p>
+      </div>
+
+      <div class="register-card">
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" placeholder="Your password" required />
+          </div>
+          <button type="submit" class="btn-create-account">Sign In</button>
+        </form>
+        <div class="signin-link">
+          Don't have an account? <a href="index.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      alert('Login would connect to your backend.');
+    }
+  </script>
+</body>
+</html>

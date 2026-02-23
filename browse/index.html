@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - GreenNest</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#2e7d32"/>
+        </svg>
+        GreenNest
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="../Home/1st.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../browse/index.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="../blog/index.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../plant _care_assistent/index.html">Plant Care</a></li>
+          <li class="nav-item"><a class="nav-link" href="../cart/index.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="../login-page/login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-register ms-2" href="../register/index.html">Register</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../dashboard/index.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="container">
+    <div class="page-header">
+      <h1>Shop Products</h1>
+      <p>Plants, seeds, fertilizers, pots, garden tools, and more—all from our database.</p>
+    </div>
+
+    <!-- FILTER SECTION -->
+    <div class="filter-section">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Indoor</button>
+      <button class="filter-btn">Outdoor</button>
+      <button class="filter-btn">Seeds </button>
+      <button class="filter-btn">Fertilizers & Nutrients</button>
+      <button class="filter-btn">Pots & Planters</button>
+      <button class="filter-btn">Garden Tools</button>
+      <button class="filter-btn">Pesticides </button>
+      
+      <div class="search-box">
+        <input type="text" class="form-control" placeholder="Search products...">
+      </div>
+    </div>
+
+    <!-- PLANT GRID - Loaded from database via API -->
+    <div class="plant-grid">
+      <p class="loading">Loading products...</p>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="browse.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+  background: url('https://images.unsplash.com/photo-1598030434654-d93e3600c8b0?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 150px 20px;
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+.hero-buttons .btn {
+  margin: 10px;
+  font-size: 1rem;
+}
+
+nav.navbar {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #2e7d32 !important;
+}
+
+.nav-link {
+  color: #333 !important;
+}
+
+.btn-register {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-register:hover {
+  background-color: #256727;
+}
+
+/* SEASONAL SUGGESTIONS SECTION */
+.seasonal-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.seasonal-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.seasonal-header h2 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.seasonal-header h2 span {
+  color: #4caf50;
+  font-style: italic;
+}
+
+.seasonal-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.seasonal-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.seasonal-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.seasonal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.2);
+}
+
+.seasonal-card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.seasonal-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.seasonal-card:hover .seasonal-card-image img {
+  transform: scale(1.05);
+}
+
+.seasonal-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2e7d32;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.seasonal-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.seasonal-card-content h3 {
+  font-size: 1.3rem;
+  color: #2e7d32;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.seasonal-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.seasonal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.seasonal-price {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.seasonal-cart-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.seasonal-cart-btn:hover {
+  background: #2e7d32;
+  transform: scale(1.05);
+}
+
+.seasonal-loading,
+.seasonal-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.seasonal-error {
+  color: #d32f2f;
+}
+
+.no-products {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seasonal-header h2 {
+    font-size: 2rem;
+  }
+  
+  .seasonal-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
